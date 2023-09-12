@@ -5,7 +5,7 @@ date: 2022-09-13 03:13:00 +0900
 categories: [CPP]
 tags: [CPP]
 image:
-  path: /assets/img/favicons/logo.png
+  path: /assets/img/blog/Vtable.png
   lqip: data:image/webp;base64,UklGRpoAAABXRUJQVlA4WAoAAAAQAAAADwAABwAAQUxQSDIAAAARL0AmbZurmr57yyIiqE8oiG0bejIYEQTgqiDA9vqnsUSI6H+oAERp2HZ65qP/VIAWAFZQOCBCAAAA8AEAnQEqEAAIAAVAfCWkAALp8sF8rgRgAP7o9FDvMCkMde9PK7euH5M1m6VWoDXf2FkP3BqV0ZYbO6NA/VFIAAAA
   alt: Responsive rendering of Chirpy theme on multiple devices.
 ---
@@ -39,7 +39,7 @@ If we use 'virtual' in our class(virtula function or virtual destructor), or inh
 
 Simply, it is collection of fuction pointer that points to the virtual function. Also, there is information regarding their type(pointer to a type_info). Ok, we won't go deeper. You just have to know that 'virtual' makes VTable.
 
-<img src="../assets/img/blog/Vtable.png">
+<img src="/assets/img/blog/Vtable.png">
 
 ## 3. When Should we use it
 
@@ -54,7 +54,7 @@ Let's take a look at the main function below. What would be the result? Yes "Bar
 
 So If we didn't use the virtual keyword, there would be no VTable, leading to no Polymorphism.
 
-```CPP
+```cpp
 int main()
 {
     Animal *animal = new Dog();
@@ -68,7 +68,7 @@ Dynamic Casting is a safe downcasting at run time. It proivdes a type checks so 
 
 Dynamic Casting is done by using RTTI(Run Time Type Information). RTTI is a mechanism that allows the type of an object to be determined during program execution. And it uses type_info to know the type of the object during runtime. So Dynamic Casting also need a 'virtual' keyword.
 
-```CPP
+```cpp
 int main()
 {
     Animal *animal = new Dog();
